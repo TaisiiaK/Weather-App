@@ -1,0 +1,129 @@
+.card {
+  margin-top: 50px;
+  border-color: #757a79;
+  background: radial-gradient(
+    592px at 48.2% 50%,
+    rgba(255, 255, 249, 0.6) 0%,
+    rgb(160, 199, 254) 74.6%
+  );
+}
+.imageWeather {
+  font-size: 120px;
+  left: 50px;
+}
+.currentDegree {
+  font-size: 100px;
+  color: #f19c13;
+  font-family: "Google Sans";
+}
+/* .units {
+    font-size: 22px !important;
+    font-family: "Google Sans";
+    position: absolute;
+    top: 70px; */
+/* } */
+.humidity {
+  margin: 10px 10px 0 0;
+  font-size: 20px;
+  font-family: "Poppins";
+  position: absolute;
+  top: 145px;
+  padding-left: 400px;
+  margin-top: 20px;
+}
+.humidityAndWind {
+  position: absolute;
+  top: -60px;
+  color: #757a79;
+}
+.wind {
+  margin: 0px 10px 0 0;
+  font-size: 20px;
+  font-family: "Poppins";
+  position: absolute;
+  top: 135px;
+  padding-left: 400px;
+}
+.description {
+  margin: 0px 10px 0 0;
+  font-size: 20px;
+  font-family: "Poppins";
+  position: absolute;
+  top: 195px;
+  padding-left: 400px;
+}
+.form-control {
+  background: #e8f1fc;
+  width: 200px;
+  margin-right: 10px;
+  height: 39px;
+  border-color: #757a79;
+}
+.blokSearch {
+  margin-top: 50px;
+  padding-right: 30px;
+}
+.searchCity {
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn-success {
+  margin-left: 10px;
+}
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px 80px 30px;
+  border-color: #757a79;
+}
+.currentCity {
+  text-align: left;
+  margin: 10px 10px 0 0;
+  font-size: 36px;
+  font-family: "Google Sans";
+  font-weight: bold;
+}
+.currentTime {
+  text-align: left;
+  margin: 10px 10px 0 0;
+  font-size: 36px;
+  font-family: "Google Sans";
+  font-weight: bold;
+}
+.currentDay {
+  text-align: left;
+  margin: 0 10px 0 0;
+  font-size: 36px;
+  font-family: "Google Sans";
+}
+.currentDate {
+  text-align: left;
+  margin: 0 10px 0 0;
+  font-size: 36px;
+  font-family: "Google Sans";
+}
+.col {
+  font-size: 20px;
+  text-align: center;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.date {
+  margin-top: 40px;
+  color: #757a79;
+}
+.border {
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  border: 1px solid #757a79 !important;
+  border-radius: 20px;
+}
+.day {
+  font-size: 68px;
+  color: #f19c13;
+  font-family: "Poppins";
+}
