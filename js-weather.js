@@ -55,12 +55,12 @@ function handleSubmit(event) {
   let city = document.querySelector("#inputCity").value;
   searchCity(city);
 }
+let celcium;
 
 function showTemperature(response) {
   document.querySelector("#actualCity").innerHTML = response.data.name;
-  document.querySelector("#actualNumberdegree").innerHTML = `${Math.round(
-    response.data.main.temp
-  )}°С`;
+  celcium = Math.round(response.data.main.temp);
+  document.querySelector("#actualNumberdegree").innerHTML = celcium;
   document.querySelector(
     "#actualWind"
   ).innerHTML = `Wind:${response.data.wind.speed}km/h`;
@@ -86,3 +86,17 @@ function searchLocation(position) {
   console.log(position.coords.longitude);
   axios.get(apiUrl).then(showTemperature);
 }
+
+function changeDegreeFahrenheit() {
+  document.querySelector("#actualNumberdegree").innerHTML = Math.round(
+    celcium * 1.8 + 32
+  );
+}
+let fahrenheitClick = document.querySelector("#fahrenheyt-link");
+fahrenheitClick.addEventListener("click", changeDegreeFahrenheit);
+
+function changeDegreeCelciy() {
+  document.querySelector("#actualNumberdegree").innerHTML = celcium;
+}
+let celciyClick = document.querySelector("#celcius-link");
+celciyClick.addEventListener("click", changeDegreeCelciy);
