@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <title>Weather App</title>
+    <title>Weather</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="weather-style.css" />
+    <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
     <div class="container">
@@ -28,10 +28,10 @@
               <p class="currentDegree">
                 <span class="imageWeather">☀️</span>
                 <span class="numberdegree" id="actualNumberdegree"></span>
-                <!-- <span class="units"> -->
-                <!-- <span id="celcius-link">°С</span> -->
-                <!-- <a href="#" id="fahrenheyt-link">°F</a> -->
-                <!-- </span> -->
+                <span class="units">
+                  <a href="#" id="celcius-link">°С</a> |
+                  <a href="#" id="fahrenheyt-link">°F</a>
+                </span>
               </p>
             </div>
             <div class="blokSearch">
@@ -112,6 +112,6 @@
         >Open-source code</a
       ><span> by Taisiia Kompaniets</span>
     </div>
-    <script src="js-weather.js"></script>
+    <script src="src/index.js"></script>
   </body>
 </html>
