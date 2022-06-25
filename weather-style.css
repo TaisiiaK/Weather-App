@@ -16,12 +16,12 @@
   color: #f19c13;
   font-family: "Google Sans";
 }
-/* .units {
-    font-size: 22px !important;
-    font-family: "Google Sans";
-    position: absolute;
-    top: 70px; */
-/* } */
+.units {
+  font-size: 22px !important;
+  font-family: "Google Sans";
+  position: absolute;
+  top: 70px;
+}
 .humidity {
   margin: 10px 10px 0 0;
   font-size: 20px;
