@@ -7,13 +7,10 @@
     rgb(160, 199, 254) 74.6%
   );
 }
-.imageWeather {
-  font-size: 120px;
-  left: 50px;
-}
 .currentDegree {
-  font-size: 100px;
+  font-size: 80px;
   color: #f19c13;
+  left: 80px;
   font-family: "Google Sans";
 }
 .units {
