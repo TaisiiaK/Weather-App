@@ -69,6 +69,9 @@ function showTemperature(response) {
   ).innerHTML = `Humidity:${response.data.main.humidity}%`;
   document.querySelector("#actualDescription").innerHTML =
     response.data.weather[0].main;
+  document
+    .querySelector("#icon")
+    .setAttribute("src", "http://openweathermap.org/img/wn/10d@2x.png");
 }
 searchCity("Kyiv");
 
