@@ -71,7 +71,10 @@ function showTemperature(response) {
     response.data.weather[0].main;
   document
     .querySelector("#icon")
-    .setAttribute("src", "http://openweathermap.org/img/wn/10d@2x.png");
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
 }
 searchCity("Kyiv");
 
