@@ -7,6 +7,9 @@
     rgb(160, 199, 254) 74.6%
   );
 }
+.weather-icon {
+  margin-bottom: 50px;
+}
 .currentDegree {
   font-size: 80px;
   color: #f19c13;
