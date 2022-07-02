@@ -1,18 +1,14 @@
 .card {
   margin-top: 50px;
   border-color: #757a79;
-  background: radial-gradient(
-    592px at 48.2% 50%,
-    rgba(255, 255, 249, 0.6) 0%,
-    rgb(160, 199, 254) 74.6%
-  );
+  background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
 }
 .weather-icon {
   margin-bottom: 50px;
 }
 .currentDegree {
   font-size: 80px;
-  color: #f19c13;
+  color: #157347;
   left: 80px;
   font-family: "Google Sans";
 }
@@ -124,6 +120,6 @@
 }
 .day {
   font-size: 68px;
-  color: #f19c13;
+  color: #157347;
   font-family: "Poppins";
 }
