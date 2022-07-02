@@ -57,6 +57,18 @@ function handleSubmit(event) {
 }
 let celcium;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = `<div class="col">
+  <p class="date">24/05</p>
+  <div class="col border">
+    <span class="weather-forecast-temperature-max">30°</span>
+    <span class="weather-forecast-temperature-min">26°</span>
+    <p class="day">Tue</p>
+  </div>
+</div>`;
+}
+
 function showTemperature(response) {
   document.querySelector("#actualCity").innerHTML = response.data.name;
   celcium = Math.round(response.data.main.temp);
@@ -76,6 +88,7 @@ function showTemperature(response) {
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
 }
+displayForecast();
 searchCity("Kyiv");
 
 let current = document.querySelector("#currentButton");
