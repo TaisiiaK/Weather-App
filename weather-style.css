@@ -109,11 +109,17 @@
 }
 .date {
   margin-top: 40px;
-  color: #757a79;
+  color: black;
+}
+.weather-forecast-temperature-max {
+  font-weight: normal;
+  font-size: 18px;
+}
+.weather-forecast-temperature-min {
+  font-weight: lighter;
+  font-size: 17px;
 }
 .border {
-  font-weight: bold;
-  font-size: 24px;
   text-align: center;
   border: 1px solid #757a79 !important;
   border-radius: 20px;
