@@ -108,8 +108,9 @@
   margin-right: 5px;
 }
 .date {
-  margin-top: 40px;
+  margin-top: 50px;
   color: #0b5ed7;
+  text-align: center;
   font-size: 18px !important;
 }
 .weather-forecast-temperature-max {
