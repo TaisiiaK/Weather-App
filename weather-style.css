@@ -109,7 +109,8 @@
 }
 .date {
   margin-top: 40px;
-  color: black;
+  color: #0b5ed7;
+  font-size: 18px !important;
 }
 .weather-forecast-temperature-max {
   font-weight: normal;
