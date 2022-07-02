@@ -60,18 +60,22 @@ let celcium;
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
-  let forecastHTML = "";
-  forecastHTML =
-    forecastHTML +
-    `<div class="col">
-  <p class="date">24/05</p>
-  <div class="col border">
-    <span class="weather-forecast-temperature-max">30°</span>
-    <span class="weather-forecast-temperature-min">26°</span>
-    <p class="day">Tue</p>
-  </div>
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+<p class="date">24/05</p>
+<div class="col border">
+  <span class="weather-forecast-temperature-max">30°</span>
+  <span class="weather-forecast-temperature-min">26°</span>
+  <p class="day">${day}</p>
+</div>
 </div>`;
+  });
 
+  forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
 
