@@ -59,7 +59,11 @@ let celcium;
 
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
-  forecastElement.innerHTML = `<div class="col">
+
+  let forecastHTML = "";
+  forecastHTML =
+    forecastHTML +
+    `<div class="col">
   <p class="date">24/05</p>
   <div class="col border">
     <span class="weather-forecast-temperature-max">30°</span>
@@ -67,6 +71,8 @@ function displayForecast() {
     <p class="day">Tue</p>
   </div>
 </div>`;
+
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function showTemperature(response) {
