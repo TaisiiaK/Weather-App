@@ -57,6 +57,19 @@ function handleSubmit(event) {
 }
 let celcium;
 
+function displayDateForecast() {
+  let date = today.getDate();
+  if (date < 10) {
+    date = `0${date}`;
+  }
+  let month = today.getMonth();
+  if (month < 10) {
+    month = `0${month}`;
+  }
+  let fullDate = `${date}/ ${month}`;
+  return fullDate;
+}
+
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
@@ -65,6 +78,7 @@ function formatDay(timestamp) {
 }
 
 function displayForecast(response) {
+  console.log(response.data);
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
@@ -75,7 +89,7 @@ function displayForecast(response) {
       forecastHTML =
         forecastHTML +
         `<div class="col-2">
-<p class="date">24/05</p>
+<p class="date">${displayDateForecast(forecastDay)}</p>
 <div class="col border">
 <img
  src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
