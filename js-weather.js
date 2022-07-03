@@ -57,10 +57,12 @@ function handleSubmit(event) {
 }
 let celcium;
 
-function displayDateForecast() {
+function displayDateForecast(index) {
+  let today = new Date();
   let date = today.getDate();
+  console.log(today.getDate());
   if (date < 10) {
-    date = `0${date}`;
+    date = `0${date + index}`;
   }
   let month = today.getMonth();
   if (month < 10) {
@@ -78,18 +80,18 @@ function formatDay(timestamp) {
 }
 
 function displayForecast(response) {
-  console.log(response.data);
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
 
   forecast.forEach(function (forecastDay, index) {
+    console.log(forecastDay, index);
     if (index < 6) {
       forecastHTML =
         forecastHTML +
         `<div class="col-2">
-<p class="date">${displayDateForecast(forecastDay)}</p>
+<p class="date">${displayDateForecast(index)}</p>
 <div class="col border">
 <img
  src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
