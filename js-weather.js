@@ -63,7 +63,7 @@ function displayForecast(response) {
 
   let forecastHTML = `<div class="row">`;
 
-  forecast.forEach(function (day) {
+  forecast.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
       `<div class="col-2">
@@ -72,9 +72,9 @@ function displayForecast(response) {
 <img
  src="http://openweathermap.org/img/wn/10d@2x.png"
 alt="clear">
-  <span class="weather-forecast-temperature-max">30°</span>
-  <span class="weather-forecast-temperature-min">26°</span>
-  <p class="day">${day}</p>
+  <span class="weather-forecast-temperature-max">${forecastDay.temp.max}°</span>
+  <span class="weather-forecast-temperature-min">${forecastDay.temp.min}°</span>
+  <p class="day">${forecastDay.dt}</p>
 </div>
 </div>`;
   });
