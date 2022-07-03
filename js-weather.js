@@ -70,7 +70,7 @@ function displayForecast(response) {
 <p class="date">24/05</p>
 <div class="col border">
 <img
- src="http://openweathermap.org/img/wn/10d@2x.png"
+ src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
 alt="clear">
   <span class="weather-forecast-temperature-max">${forecastDay.temp.max}°</span>
   <span class="weather-forecast-temperature-min">${forecastDay.temp.min}°</span>
