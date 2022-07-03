@@ -57,6 +57,12 @@ function handleSubmit(event) {
 }
 let celcium;
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  return day;
+}
+
 function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
@@ -74,7 +80,7 @@ function displayForecast(response) {
 alt="clear">
   <span class="weather-forecast-temperature-max">${forecastDay.temp.max}°</span>
   <span class="weather-forecast-temperature-min">${forecastDay.temp.min}°</span>
-  <p class="day">${forecastDay.dt}</p>
+  <p class="day">${formatDay(forecastDay.dt)}</p>
 </div>
 </div>`;
   });
