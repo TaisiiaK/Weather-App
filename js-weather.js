@@ -60,7 +60,6 @@ searchCity("Kyiv");
 function displayDateForecast(index) {
   let today = new Date();
   let date = today.getDate();
-  console.log(today.getDate());
   if (date < 10) {
     date = `0${date + index}`;
   }
@@ -86,7 +85,6 @@ function displayForecast(response) {
   let forecastHTML = `<div class="row">`;
 
   forecast.forEach(function (forecastDay, index) {
-    console.log(forecastDay, index);
     if (index < 6) {
       forecastHTML =
         forecastHTML +
@@ -147,7 +145,5 @@ function currentButtonclick(event) {
 function searchLocation(position) {
   let apiKey = "2c41ea2f88672461a8a3403ce29353e0";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-  console.log(position.coords.latitude);
-  console.log(position.coords.longitude);
   axios.get(apiUrl).then(showTemperature);
 }
