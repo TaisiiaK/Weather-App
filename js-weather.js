@@ -70,10 +70,11 @@ function displayForecast(response) {
 
   let forecastHTML = `<div class="row">`;
 
-  forecast.forEach(function (forecastDay) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col-2">
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col-2">
 <p class="date">24/05</p>
 <div class="col border">
 <img
@@ -88,6 +89,7 @@ alt="clear">
   <p class="day">${formatDay(forecastDay.dt)}</p>
 </div>
 </div>`;
+    }
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
