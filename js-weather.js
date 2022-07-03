@@ -55,7 +55,7 @@ function handleSubmit(event) {
   let city = document.querySelector("#inputCity").value;
   searchCity(city);
 }
-let celcium;
+searchCity("Kyiv");
 
 function displayDateForecast(index) {
   let today = new Date();
@@ -136,7 +136,6 @@ function showTemperature(response) {
     );
   getForecast(response.data.coord);
 }
-searchCity("Kyiv");
 
 let current = document.querySelector("#currentButton");
 current.addEventListener("click", currentButtonclick);
@@ -152,17 +151,3 @@ function searchLocation(position) {
   console.log(position.coords.longitude);
   axios.get(apiUrl).then(showTemperature);
 }
-
-function changeDegreeFahrenheit() {
-  document.querySelector("#actualNumberdegree").innerHTML = Math.round(
-    celcium * 1.8 + 32
-  );
-}
-let fahrenheitClick = document.querySelector("#fahrenheyt-link");
-fahrenheitClick.addEventListener("click", changeDegreeFahrenheit);
-
-function changeDegreeCelciy() {
-  document.querySelector("#actualNumberdegree").innerHTML = celcium;
-}
-let celciyClick = document.querySelector("#celcius-link");
-celciyClick.addEventListener("click", changeDegreeCelciy);
