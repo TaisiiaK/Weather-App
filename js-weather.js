@@ -120,9 +120,9 @@ function showTemperature(response) {
   document.querySelector("#actualCity").innerHTML = response.data.name;
   celcium = Math.round(response.data.main.temp);
   document.querySelector("#actualNumberdegree").innerHTML = celcium;
-  document.querySelector(
-    "#actualWind"
-  ).innerHTML = `Wind:${response.data.wind.speed}km/h`;
+  document.querySelector("#actualWind").innerHTML = `Wind:${Math.round(
+    response.data.wind.speed
+  )}m/h`;
   document.querySelector(
     "#actualHumidity"
   ).innerHTML = `Humidity:${response.data.main.humidity}%`;
