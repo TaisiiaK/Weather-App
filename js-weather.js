@@ -59,15 +59,18 @@ searchCity("Kyiv");
 
 function displayDateForecast(index) {
   let today = new Date();
-  let date = today.getDate();
+  let date = today.getDate() + index;
+  console.log(date);
   if (date < 10) {
-    date = `0${date + index}`;
+    date = `0${date}`;
   }
   let month = today.getMonth();
   if (month < 10) {
     month = `0${month}`;
   }
   let fullDate = `${date}/ ${month}`;
+  console.log(fullDate);
+
   return fullDate;
 }
 
