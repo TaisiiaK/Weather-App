@@ -45,6 +45,15 @@ todayDate.innerHTML = `${date} ${month}`;
 let searchButton = document.querySelector("#searchButton");
 searchButton.addEventListener("click", handleSubmit);
 
+function enterClick(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.querySelector("#searchButton").click();
+  }
+}
+let input = document.querySelector("#inputCity");
+input.addEventListener("keypress", enterClick);
+
 function searchCity(city) {
   let apiKey = "2c41ea2f88672461a8a3403ce29353e0";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
